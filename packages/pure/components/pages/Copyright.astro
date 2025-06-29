@@ -91,9 +91,9 @@ const shares = {
         <Icon class='size-5' name='qrcode' />
       </button>
       {
-        config.content.share.map((share) => (
+        config.content.share.map((share: any) => (
           <a
-            href={shares[share].link}
+            href={shares[share as keyof typeof shares].link}
             target='_blank'
             id={`share-${share}`}
             class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
@@ -112,7 +112,7 @@ const shares = {
 
 <div class='mx-6 rounded-b-xl border border-t-0 px-3 pb-1.5 pt-1 sm:mx-8 sm:px-4'>
   <a
-    href='/projects#sponsorship'
+    href='https://ko-fi.com/sethburkart'
     class='flex items-center justify-between text-muted-foreground no-underline'
     target='_blank'
   >

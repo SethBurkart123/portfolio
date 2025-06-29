@@ -38,8 +38,8 @@ if (!images[imagePath])
     loading='lazy'
   />
   <div class='project-card-fg z-10 flex flex-col gap-y-0.5 px-5 pb-4 pt-28'>
-    <h2 class='text-lg font-medium'>{heading}</h2>
-    <p class='text-muted-foreground'>{subheading}</p>
+    <h2 class='text-lg font-medium text-white text-shadow-lg'>{heading}</h2>
+    <p class='text-zinc-200 text-shadow-lg'>{subheading}</p>
   </div>
   <slot />
 </Tag>
@@ -58,6 +58,6 @@ if (!images[imagePath])
   }
 
   .project-card:hover .project-card-fg {
-    --un-gradient-to-position: 100%;
+    --un-gradient-to-position: 60%;
   }
 </style>

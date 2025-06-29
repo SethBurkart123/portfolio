@@ -13,7 +13,7 @@ social.rss = {
   url: '/rss.xml'
 }
 
-const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
+const footerLink1 = footerConf.links?.filter(({ pos }: { pos: number }) => pos === 1) || []
 ---
 
 <footer class='mx-auto mb-5 mt-16'>
@@ -26,7 +26,7 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
         {
           footerLink1.length > 0 && (
             <div>
-              {footerLink1.map(({ title, link, style }, index) => (
+              {footerLink1.map(({ title, link, style }: { title: string, link: string, style: string }, index: number) => (
                 <span>
                   <a href={link} target='_blank' class={style}>
                     {title}
@@ -47,8 +47,8 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
                 &
                 <span>
                   {footerConf.links
-                    .filter(({ pos }) => pos === 2)
-                    .map(({ title, link, style }) => (
+                    .filter(({ pos }: { pos: number }) => pos === 2)
+                    .map(({ title, link, style }: { title: string, link: string, style: string }) => (
                       <span>
                         <a href={link} target='_blank' class={style}>
                           {title}

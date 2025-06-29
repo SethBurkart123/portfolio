@@ -57,12 +57,18 @@ span.katex-display {
   border-radius: 0.5rem;
   background-color: hsl(var(--muted) / var(--un-bg-opacity, 1)) !important;
 
+  & .title {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
   /* Code container */
   & pre {
     margin: 0;
     padding-inline: 0;
     background: none;
     overflow-x: scroll;
+    padding: 1rem 0.5rem;
 
     & code {
       display: block;
