@@ -28,6 +28,7 @@
     "@waline/client": "^3.5.7",
     "astro": "^5.8.1",
     "astro-pure": "link:packages/pure",
+    "hast": "^1.0.0",
     "hastscript": "^9.0.1",
     "katex": "^0.16.22",
     "rehype-katex": "^7.0.1",
