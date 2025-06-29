@@ -30,6 +30,7 @@ async function fetchCount(item: SubstatsItem) {
     }
   } catch (error) {
     console.error('Error in Substats fetching: ' + error)
+    item.count = undefined
   }
 }
 
@@ -56,7 +57,7 @@ await Promise.all(stats.map(fetchCount))
               <span class='text-sm font-normal'>{text}</span>
             </div>
           ) : (
-            'null'
+            ''
           )}
         </div>
       </a>
